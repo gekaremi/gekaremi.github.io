@@ -69,7 +69,7 @@ function draw() {
   textSize(90);
   //text(sName, 10, 30);
   fill(0, 102, 153);
-  text(sName, 400, 90);
+  text(sName, 10, 30);
   fill(255, 204, 0);
   text(str(score), 10, 90);
 
