@@ -133,11 +133,12 @@ function draw() {
   if (abs(position.x - position_target.x) < 9*r) {
 
   if (abs(position.y - position_target.y) < 9*r) {
+    noStroke();
+    fill(0, 255, 0);
+    ellipse(position_target.x, position_target.y, r * 15, r * 15);
     position_target = createVector(random(0.2*width, 0.8*width), random(0.1*height, 0.5*height));
     score = score + 1;
     noStroke();
-    fill(0, 255, 0);
-    ellipse(position.x, position.y, r * 15, r * 15);
     fill(255, 204, 0);
     ellipse(position_target.x, position_target.y, r * 15, r * 15);
 
