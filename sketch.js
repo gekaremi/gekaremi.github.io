@@ -98,7 +98,8 @@ function draw() {
       0
     );
     velocity.mult(speed);
-
+    position.add(velocity);
+    
     // draw base top normal at collision point
     stroke(255, 128, 0);
     line(
@@ -107,6 +108,9 @@ function draw() {
       position.x - normal.x * 100,
       position.y - normal.y * 100
     );
+    noStroke();
+    fill(0, 0, 255);
+    ellipse(position.x, position.y, r * 15, r * 15);
   }
   //}
 
@@ -115,17 +119,25 @@ function draw() {
   if (position.x > width - r) {
     position.x = width - r;
     velocity.x *= -1;
+    noStroke();
+    fill(0, 0, 255);
+    ellipse(position.x, position.y, r * 15, r * 15);
   }
   // left
   if (position.x < r) {
     position.x = r;
     velocity.x *= -1;
+    noStroke();
+    fill(0, 0, 255);
+    ellipse(position.x, position.y, r * 15, r * 15);
   }
   // top
   if (position.y < r) {
     position.y = r;
     velocity.y *= -1;
-
+    noStroke();
+    fill(0, 0, 255);
+    ellipse(position.x, position.y, r * 15, r * 15);
 
   }
 
