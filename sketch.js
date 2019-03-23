@@ -92,13 +92,13 @@ function draw() {
   
   //draw enemy
   noStroke();
-  fill(0, 0, 255);
-  ellipse(position_enemy.x, position_enemy.y, r * 5, r * 5); 
+  fill(255, 0, 0);
+  ellipse(position_enemy.x, position_enemy.y, r * 15, r * 15); 
   
 
   //move ellipse
   position.add(velocity);
-  
+  position_enemy.add(velocity_enemy)
   
   velocity_enemy =  createVector(position.x - position_enemy.x, position.y - position_enemy.y)
   velocity_enemy.normalize()
