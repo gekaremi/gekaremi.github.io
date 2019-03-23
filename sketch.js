@@ -40,6 +40,11 @@ function draw() {
   noStroke();
   rect(0, 0, width, height);
 
+  
+  //control base top
+  base1.y = 180 + rotationZ - 90;
+  base2.y = 180 - rotationZ - 90;
+  
   //draw base
   fill(200);
   quad(base1.x, base1.y, base2.x, base2.y, base2.x, height, 0, height);
@@ -103,8 +108,5 @@ function draw() {
     position.y = r;
     velocity.y *= -1;
 
-    //control base top
-    base1.y = 180 + rotationZ - 90;
-    base2.y = 180 - rotationZ - 90;
   }
 }
