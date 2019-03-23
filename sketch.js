@@ -103,8 +103,8 @@ function draw() {
     position.y = r;
     velocity.y *= -1;
 
-    //randomize base top
-    base1.y = random(height - 100, height);
-    base2.y = random(height - 100, height);
+    //control base top
+    base1.y = rotationX(height - 100, height);
+    base2.y = rotationX(height - 100, height);
   }
 }
