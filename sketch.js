@@ -104,7 +104,7 @@ function draw() {
     velocity.y *= -1;
 
     //control base top
-    base1.y = 180 + rotationZ;
-    base2.y = 180 - rotationZ;
+    base1.y = 180 + rotationZ - 90;
+    base2.y = 180 - rotationZ - 90;
   }
 }
