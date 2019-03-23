@@ -10,6 +10,9 @@ let base2;
 // Variables related to moving ball
 let position;
 let position_target;
+let position_enemy;
+let velocity_enemy;
+
 let velocity;
 let r = 6;
 let speed = 7.5;
@@ -28,10 +31,18 @@ function setup() {
   position = createVector(width/2, 0);
 
   position_target = createVector(random(0.2*width, 0.8*width), random(0.1*height, 0.5*height));
+  
+  position_enemy = createVector(random(0.2*width, 0.8*width), random(0.1*height, 0.5*height));
+  
 
   //calculate initial random velocity
   velocity = p5.Vector.random2D();
   velocity.mult(speed);
+  
+  velocity_enemy = p5.Vector.random2D();
+  velocity_enemy.mult(0.2*speed);
+  
+  
   score = 0;
 }
 
@@ -77,10 +88,22 @@ function draw() {
   noStroke();
   fill(255, 204, 0);
   ellipse(position_target.x, position_target.y, r * 5, r * 5);
+  
+  
+  //draw enemy
+  noStroke();
+  fill(0, 0, 255);
+  ellipse(position_enemy.x, position_enemy.y, r * 5, r * 5); 
+  
 
   //move ellipse
   position.add(velocity);
-
+  
+  
+  velocity_enemy =  createVector(position.x - position_enemy.x, position.y - position_enemy.y)
+  velocity_enemy.normalize()
+  velocity_enemy.mult(0.2*speed);
+  
   //normalized incidence vector
   incidence = p5.Vector.mult(velocity, -1);
   incidence.normalize();
