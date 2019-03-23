@@ -42,8 +42,8 @@ function draw() {
 
   
   //control base top
-  base1.y = rotationZ;
-  base2.y = -rotationZ;
+  base1.y = 400 + rotationZ;
+  base2.y = 400 - rotationZ;
   
   //draw base
   fill(200);
