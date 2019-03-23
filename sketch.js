@@ -14,8 +14,9 @@ let position_enemy;
 let velocity_enemy;
 
 let velocity;
-let r = 6;
-let speed = 7.5;
+let scale = 1900/windowWidth
+let r = 6*scale;
+let speed = 7.5*scale;
 angleMode(RADIANS);
 
 function setup() {
