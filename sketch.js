@@ -65,11 +65,11 @@ function draw() {
   fill(200);
   quad(base1.x, base1.y, base2.x, base2.y, base2.x, height, 0, height);
 
-  let sName = 'ANGLENOID v0.1.1';
+  //let sName = 'ANGLENOID v0.1.1';
   textSize(90);
   //text(sName, 10, 30);
-  fill(0, 102, 153);
-  text(sName, 10, 30);
+  //fill(0, 102, 153);
+  //text(sName, 10, 30);
   fill(255, 204, 0);
   text(str(score), 10, 90);
 
