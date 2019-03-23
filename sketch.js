@@ -71,12 +71,12 @@ function draw() {
   //draw ellipse
   noStroke();
   fill(255);
-  ellipse(position.x, position.y, r * 2, r * 2);
+  ellipse(position.x, position.y, r * 10, r * 10);
 
-    //draw ellipse
+    //draw targer
   noStroke();
-  fill(255);
-  ellipse(position_target.x, position_target.y, r * 10, r * 10);
+  fill(255, 204, 0);
+  ellipse(position_target.x, position_target.y, r * 5, r * 5);
 
   //move ellipse
   position.add(velocity);
@@ -130,9 +130,9 @@ function draw() {
   }
 
     // left
-  if (abs(position.x - position_target.x) < 5*r) {
+  if (abs(position.x - position_target.x) < 15*r) {
 
-  if (abs(position.y - position_target.y) < 5*r) {
+  if (abs(position.y - position_target.y) < 15*r) {
     position_target = createVector(random(0.2*width, 0.8*width), random(0.1*height, 0.5*height));
     score = score + 1;
 
