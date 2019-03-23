@@ -137,6 +137,8 @@ function draw() {
     score = score + 1;
     noStroke();
     fill(0, 255, 0);
+    ellipse(position.x, position.y, r * 15, r * 15);
+    fill(255, 204, 0);
     ellipse(position_target.x, position_target.y, r * 15, r * 15);
 
   }
