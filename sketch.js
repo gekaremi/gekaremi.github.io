@@ -19,7 +19,7 @@ let r = 6;
 let speed = 3.5;
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(400, 800);
 
   fill(128);
   base1 = createVector(0, height - 150);
