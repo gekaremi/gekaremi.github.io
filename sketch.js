@@ -58,7 +58,7 @@ function draw() {
   //text(sName, 10, 30);
   //fill(0, 102, 153);
   //text(sName, 10, 60);
-  fill((255, 204, 0);
+  fill(255, 204, 0);
   text(str(score), 10, 90);
 
 
