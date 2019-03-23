@@ -23,7 +23,7 @@ angleMode(RADIANS);
 
 function setup() {
   // createCanvas(710, 400);
-  createCanvas(0.99*windowWidth, 0.99*windowHeight);
+  createCanvas(windowWidth, windowHeight);
   pixelDensity(0.25);
   fill(128);
   base1 = createVector(0, height - 150);
