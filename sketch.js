@@ -53,12 +53,12 @@ function draw() {
   fill(200);
   quad(base1.x, base1.y, base2.x, base2.y, base2.x, height, 0, height);
 
-  let sName = 'ANGLENOID version 0.0.3';
-  textSize(40);
-  text(sName, 10, 30);
-  fill(0, 102, 153);
-  text(sName, 10, 60);
-  fill(0, 102, 153, 51);
+  //let sName = 'ANGLENOID version 0.0.4';
+  textSize(90);
+  //text(sName, 10, 30);
+  //fill(0, 102, 153);
+  //text(sName, 10, 60);
+  fill((255, 204, 0);
   text(str(score), 10, 90);
 
 
@@ -130,9 +130,9 @@ function draw() {
   }
 
     // left
-  if (abs(position.x - position_target.x) < 15*r) {
+  if (abs(position.x - position_target.x) < 9*r) {
 
-  if (abs(position.y - position_target.y) < 15*r) {
+  if (abs(position.y - position_target.y) < 9*r) {
     position_target = createVector(random(0.2*width, 0.8*width), random(0.1*height, 0.5*height));
     score = score + 1;
 
