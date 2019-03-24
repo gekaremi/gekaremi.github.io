@@ -96,7 +96,7 @@ function draw() {
   //draw enemy
   noStroke();
   fill(255, 0, 0);
-  ellipse(position_enemy.x, position_enemy.y, r * 15, r * 15); 
+  ellipse(position_enemy.x, position_enemy.y, r * 5, r * 5); 
   
 
   //move ellipse
@@ -168,17 +168,19 @@ function draw() {
   }
 
     // left
-  if (abs(position.x - position_enemy.x) < 17*r) {
+  if (abs(position.x - position_enemy.x) < 7*r) {
 
-  if (abs(position.y - position_enemy.y) < 17*r) {
+  if (abs(position.y - position_enemy.y) < 7*r) {
     noStroke();
-    fill(255, 0, 0);
-    ellipse(position_enemy.x, position_enemy.y, r * 20, r * 20);
-    position = createVector(random(0.2*width, 0.8*width), random(0.1*height, 0.5*height));
+    fill(255, 100, 0);
+    ellipse(position_enemy.x, position_enemy.y, r * 25, r * 25);
+    position = createVector(random(0.4*width, 0.8*width), random(0.1*height, 0.5*height));
     score = max(score - 10, 0);
     noStroke();
-    fill(0, 0, 0);
+    fill(0, 255, 0);
     ellipse(position.x, position.y, r * 20, r * 20);
+    
+    position = createVector(random(0.2*width, 0.4*width), random(0.1*height, 0.5*height));
 
   }
  }
