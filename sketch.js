@@ -124,7 +124,7 @@ function draw() {
       0
     );
     velocity.mult(speed + score/10);
-    position.add(velocity);
+    position.add(velocity + normal);
     
     // draw base top normal at collision point
     stroke(255, 128, 0);
