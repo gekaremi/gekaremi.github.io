@@ -67,11 +67,11 @@ function draw() {
   fill(200);
   quad(base1.x, base1.y, base2.x, base2.y, base2.x, height, 0, height);
 
-  let sName = 'ANGLENOID v0.2.1';
+  let sName = 'ANGLENOID v0.3.1';
   textSize(90);
   //text(sName, 10, 30);
   fill(0, 102, 153);
-  text(sName, 200, 90);
+  text(sName, 150, 90);
   fill(255, 204, 0);
   text(str(score), 10, 90);
 
@@ -175,12 +175,14 @@ function draw() {
     fill(255, 100, 0);
     ellipse(position_enemy.x, position_enemy.y, r * 25, r * 25);
     position_enemy = createVector(random(0.5*width, 0.8*width), random(0.1*height, 0.5*height));
-    score = max(score - 10, 0);
+    score = max(score - 1, 0);
     noStroke();
     fill(0, 255, 0);
     ellipse(position.x, position.y, r * 20, r * 20);
     
     position = createVector(random(0.2*width, 0.3*width), random(0.1*height, 0.5*height));
+    velocity = createVector(0, 1);
+    velocity.mult(speed);
 
   }
  }
