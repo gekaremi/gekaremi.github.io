@@ -23,7 +23,7 @@ angleMode(RADIANS);
 
 function setup() {
   // createCanvas(710, 400);
-  createCanvas(windowWidth, 0.9*windowHeight);
+  createCanvas(0.9*windowWidth, 0.9*windowHeight);
   pixelDensity(0.25);
   fill(128);
   base1 = createVector(0, height - 150);
@@ -58,10 +58,10 @@ function draw() {
 
 
 
-  controller = height*0.25*sin((winMouseX - 0.5*width)/width)
+  controller = height*0.35*sin((winMouseX - 0.5*width)/width)
   //randomize base top
-  base1.y = 0.75*height + controller;
-  base2.y = 0.75*height - controller;
+  base1.y = 0.65*height + controller;
+  base2.y = 0.65*height - controller;
 
   //draw base
   fill(200);
