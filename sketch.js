@@ -67,11 +67,11 @@ function draw() {
   fill(200);
   quad(base1.x, base1.y, base2.x, base2.y, base2.x, height, 0, height);
 
-  let sName = 'ANGLENOID v0.1.1';
+  let sName = 'ANGLENOID v0.2.1';
   textSize(90);
   //text(sName, 10, 30);
   fill(0, 102, 153);
-  text(sName, 300, 90);
+  text(sName, 200, 90);
   fill(255, 204, 0);
   text(str(score), 10, 90);
 
@@ -85,7 +85,7 @@ function draw() {
   //draw ellipse
   noStroke();
   fill(255);
-  ellipse(position.x, position.y, r * 10 + score, r * 10 + score);
+  ellipse(position.x, position.y, r * (10 + score), r * (10 + score));
 
     //draw target
   noStroke();
@@ -124,7 +124,7 @@ function draw() {
       0
     );
     velocity.mult(speed + score/10);
-    position.add(velocity - normal);
+    position.add(velocity - abs(normal));
     
     // draw base top normal at collision point
     stroke(255, 128, 0);
