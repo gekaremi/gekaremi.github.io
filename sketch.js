@@ -23,7 +23,7 @@ angleMode(RADIANS);
 
 function setup() {
   // createCanvas(710, 400);
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, 0.9*windowHeight);
   pixelDensity(0.25);
   fill(128);
   base1 = createVector(0, height - 150);
@@ -85,7 +85,7 @@ function draw() {
   //draw ellipse
   noStroke();
   fill(255);
-  ellipse(position.x, position.y, r * 10, r * 10);
+  ellipse(position.x, position.y, r * 10 + score, r * 10 + score);
 
     //draw target
   noStroke();
