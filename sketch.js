@@ -39,7 +39,7 @@ function setup() {
   
 
   //calculate initial random velocity
-  velocity = p5.Vector.random2D();
+  velocity = createVector(0, 1);
   velocity.mult(speed);
   
   velocity_enemy = p5.Vector.random2D();
@@ -174,13 +174,13 @@ function draw() {
     noStroke();
     fill(255, 100, 0);
     ellipse(position_enemy.x, position_enemy.y, r * 25, r * 25);
-    position = createVector(random(0.4*width, 0.8*width), random(0.1*height, 0.5*height));
+    position_enemy = createVector(random(0.5*width, 0.8*width), random(0.1*height, 0.5*height));
     score = max(score - 10, 0);
     noStroke();
     fill(0, 255, 0);
     ellipse(position.x, position.y, r * 20, r * 20);
     
-    position = createVector(random(0.2*width, 0.4*width), random(0.1*height, 0.5*height));
+    position = createVector(random(0.2*width, 0.3*width), random(0.1*height, 0.5*height));
 
   }
  }
