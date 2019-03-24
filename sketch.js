@@ -123,7 +123,7 @@ function draw() {
       2 * normal.y * dot - incidence.y,
       0
     );
-    velocity.mult(speed);
+    velocity.mult(speed + score/10);
     position.add(velocity);
     
     // draw base top normal at collision point
@@ -168,6 +168,20 @@ function draw() {
   }
 
     // left
+  if (abs(position.x - position_enemy.x) < 17*r) {
+
+  if (abs(position.y - position_enemy.y) < 17*r) {
+    noStroke();
+    fill(255, 0, 0);
+    ellipse(position_enemy.x, position_enemy.y, r * 20, r * 20);
+    position = createVector(random(0.2*width, 0.8*width), random(0.1*height, 0.5*height));
+    score = max(score - 10, 0);
+    noStroke();
+    fill(0, 0, 0);
+    ellipse(position.x, position.y, r * 20, r * 20);
+
+  }
+ }
   if (abs(position.x - position_target.x) < 9*r) {
 
   if (abs(position.y - position_target.y) < 9*r) {
