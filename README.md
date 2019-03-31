@@ -1,7 +1,16 @@
 # gekaremi.github.io
 
-
+repo for games
 https://gekaremi.github.io
+
+
+# spbsu jam
+## Храп разума
+
+
+# hypercasual jam
+## angelenoid:
+
 
  Hypercasual game
  
