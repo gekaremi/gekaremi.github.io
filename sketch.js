@@ -100,8 +100,8 @@ function draw() {
 
    fill(0, 255, 0);
    textSize(300);
-   text(score, 700, 900);
-   	noLoop();}
+   text(('IQ: ' + str(score)), 700, 900);
+   noLoop();}
 }
 
 
