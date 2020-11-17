@@ -1,6 +1,6 @@
 # gekaremi.github.io
 
-repo for games
+repo NOT for games
 https://gekaremi.github.io
 
 
